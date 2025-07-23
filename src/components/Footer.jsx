@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 
 const socialLinks = [
