@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar, Container } from 'react-bootstrap';
+import Resume from './Resume';  // <-- import Resume component
 
 const NavBar = () => {
   return (
@@ -22,29 +23,10 @@ const NavBar = () => {
         >
           AditiJoshi.
         </Navbar.Brand>
-        {/* <Navbar.Toggle aria-controls="navbar-nav" />
-        <Navbar.Collapse id="navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link
-              href="#home"
-              style={{ color: '#f5f5dc', marginRight: '1rem', fontWeight: 400 }}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              href="src\Pages\ProjectsPage.jsx"
-              style={{ color: '#f5f5dc', marginRight: '1rem', fontWeight: 400 }}
-            >
-              Projects
-            </Nav.Link>
-            <Nav.Link
-              href="#resume"
-              style={{ color: '#f5f5dc', fontWeight: 400 }}
-            >
-              Resume
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse> */}
+
+        <div className="ms-auto">
+          <Resume />
+        </div>
       </Container>
     </Navbar>
   );

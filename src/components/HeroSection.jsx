@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { motion } from "framer-motion";
-
+import hero from "../assets/hero.png";
 const darkHighlight = "#e69587";
 
 const Highlight = ({ children, color }) => (
@@ -60,6 +60,11 @@ function useTypewriter(text, speed = 150, pause = 2000) {
   return displayed;
 }
 
+const darkBackground = "#2a2b29"; // card background similar to skills
+const darkBorder = "#3a3b39";
+// const darkHighlight = "#e69587";
+const darkText = "#f5f5dc";
+
 const WhatDefinesMe = () => {
   const traits = [
     "Systems Thinker",
@@ -75,40 +80,66 @@ const WhatDefinesMe = () => {
   ];
 
   return (
-    <motion.div
-      style={{ marginTop: 30 }}
-      initial={{ y: 40, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ type: "spring", bounce: 0.4, duration: 1 }}
-      viewport={{ once: true }}
+    <div
+      style={{
+        padding: "2rem 1rem",
+        maxWidth: 1100,
+        margin: "3rem auto",
+        fontFamily: "'Fira Mono', 'Fira Code', monospace",
+        color: darkText,
+      }}
     >
-      <h5 style={{ color: darkHighlight, marginBottom: 16 }}>What defines me</h5>
+      <h3
+        style={{
+          color: darkHighlight,
+          fontstyle:"bold",
+          marginBottom: 16,
+          fontWeight: 700,
+          fontSize: "1.2rem",
+          letterSpacing: "0.5px",
+        }}
+      >
+        What Defines Me
+      </h3>
       <div
         style={{
           display: "flex",
           flexWrap: "wrap",
-          gap: "12px",
+          gap: "16px",
+          justifyContent: "flex-start",
         }}
       >
         {traits.map((trait, index) => (
-          <span
+          <motion.div
             key={index}
+            whileHover={{
+              scale: 1.08,
+              y: -8,
+              // boxShadow: `0 8px 15px rgba(230, 149, 135, 0.4)`,
+              transition: { duration: 0.3, type: "spring", stiffness: 300, damping: 20 },
+            }}
             style={{
-              backgroundColor: "#2e2f2e",
-              color: "#f5f5dc",
-              border: `1px solid ${darkHighlight}`,
+              backgroundColor: darkBackground,
+              border: `1px solid ${darkBorder}`,
               borderRadius: 14,
-              padding: "6px 12px",
-              fontSize: "0.9rem",
-              fontWeight: 500,
-              fontFamily: "'Fira Mono', 'Fira Code', monospace",
+              padding: "8px 20px",
+              fontSize: "1rem",
+              fontWeight: 600,
+              color: darkText,
+              cursor: "pointer",
+              userSelect: "none",
+              boxShadow: "inset 0 0 0 1px #2f2f2f",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              whiteSpace: "nowrap",
             }}
           >
             {trait}
-          </span>
+          </motion.div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -184,7 +215,7 @@ export default function HeroSection() {
 
         <Col md={5} className="text-center mt-4 mt-md-0">
           <img
-            src="/hero-image.png"
+            src={hero}
             alt="Hero Visual"
             style={{
               maxWidth: "100%",

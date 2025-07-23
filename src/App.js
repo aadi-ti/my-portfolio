@@ -2,7 +2,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import HeroSection from './components/HeroSection';
 import ProjectsTabs from './components/ProjectTabs';
-import Resume from './components/Resume';
+// import Resume from './components/Resume';
 import Footer from './components/Footer';
 import SkillsShuffle from './components/Skills';
 import AppWrapper from './components/App';
@@ -14,7 +14,7 @@ function App() {
       <AppWrapper>
       <HeroSection />
       <ProjectsTabs/>
-      <Resume/>
+      {/* <Resume/> */}
       <SkillsShuffle/>
       </AppWrapper>
       <Footer/>

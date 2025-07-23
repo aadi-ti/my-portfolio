@@ -61,7 +61,7 @@ export default function Skills() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSkills((prev) => shuffle(prev));
-    }, 10000);
+    }, 30000);
     return () => clearInterval(interval);
   }, []);
 
