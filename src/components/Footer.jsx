@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin} from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 
 const socialLinks = [
-  { icon: FaGithub, label: "GitHub", url: "https://github.com/aaddi-ti" },
+  { icon: FaGithub, label: "GitHub", url: "https://github.com/aadi-ti" },
   { icon: FaLinkedin, label: "LinkedIn", url: "https://www.linkedin.com/in/aditi-joshi-428b01268/" },
   // { icon: FaTwitter, label: "Twitter", url: "#" },
 ];
