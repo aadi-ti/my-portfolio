@@ -76,7 +76,6 @@ const WhatDefinesMe = () => {
     "Curious Researcher",
     "Meaning-Driven",
     "Experimental",
-    "Multidisciplinary",
   ];
 
   return (
